@@ -3,6 +3,7 @@
 # * being on the same team
 # * being a superuser
 # * being in the approved users list for a project
+
 class ProjectsForUser
   def initialize(user)
     @user = user

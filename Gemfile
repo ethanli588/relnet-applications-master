@@ -27,6 +27,7 @@ gem 'redis'
 gem 'sanitize'
 gem 'will_paginate', '~> 3.1.0'
 gem 'letter_opener'
+gem 'pry-byebug'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
