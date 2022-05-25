@@ -23,6 +23,10 @@ class ProjectsController < ProjectsBaseController
       team: current_user.team,
       public_feed: params[:visibility] == 'Public'
     )
+    new_project_user = ProjectUser.new(project_id: project.id, user_id: current_user.id)
+    project.project_users.push(new_project_user)
+    new_project_user.save
+    project.save
 
     flash[:success] = 'Project created'
     return redirect_to dashboard_path
