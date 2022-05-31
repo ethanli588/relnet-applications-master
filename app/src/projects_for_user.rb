@@ -3,6 +3,14 @@
 # * being on the same team
 # * being a superuser
 # * being in the approved users list for a project
+
+# 1. #projects returns all the project in the same team
+# 2. in projects_from_same_team
+    # 1) super user can see everything
+    # 2) project with empty project_user list, can be seen by
+    #    anyone, in case all the project_user is deleted
+    # 3) user in the project_user list, can see the project (creater and the user added to the project manully)
+
 class ProjectsForUser
   def initialize(user)
     @user = user
